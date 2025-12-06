@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ My Diary ✨</h1>
+            <p>Your safe space to express yourself. Someone is always listening.</p>
+            <div class="user-info">
+                <span id="userName">Welcome!</span>
+                <button class="logout-btn" onclick="handleLogout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="card write-section">
+                <h2>Write Your Heart Out</h2>
+                
+                <div class="mood-selector">
+                    <label>How are you feeling?</label>
+                    <div class="mood-options">
+                        <button class="mood-btn" data-mood="😊 Happy">😊 Happy</button>
+                        <button class="mood-btn" data-mood="😔 Sad">😔 Sad</button>
+                        <button class="mood-btn" data-mood="😰 Anxious">😰 Anxious</button>
+                        <button class="mood-btn" data-mood="😌 Calm">😌 Calm</button>
+                        <button class="mood-btn" data-mood="😤 Angry">😤 Angry</button>
+                        <button class="mood-btn" data-mood="🤔 Thoughtful">🤔 Thoughtful</button>
+                    </div>
+                </div>
+
+                <textarea id="diaryText" placeholder="Dear Diary...&#10;&#10;What's on your mind today?"></textarea>
+                
+                <button class="btn" onclick="saveEntry()">Save Entry</button>
+
+                <div class="ai-response" id="aiResponse">
+                    <h3>💜 AI Companion</h3>
+                    <p id="aiMessage"></p>
+                </div>
+            </div>
+
+            <div class="card entries-section">
+                <h2>Your Journey</h2>
+                <div class="entries-list" id="entriesList">
+                    <div class="empty-state">
+                        <span>📔</span>
+                        <p>No entries yet. Start writing!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
